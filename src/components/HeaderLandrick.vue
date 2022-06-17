@@ -2,7 +2,7 @@
     <header>
         <img :src="imgLogo" :alt="imgAlt">
         <nav>
-            <a href="#" v-for="(item, i) in navBar" :key="i" :class="item.here? 'here':''">
+            <a href="#" v-for="(item, i) in navBar" :key="i" :class="item.here ? 'here' : ''">
                 <span>{{ item.text }}</span>
                 <font-awesome-icon icon="fa-solid fa-angle-down" v-if="i > 0" />
             </a>
@@ -59,19 +59,21 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    
 
     img {
         max-width: 140px;
     }
 
     nav {
-        a{
+        a {
             color: #3c4858;
             text-decoration: none;
             margin-right: 35px;
             font-weight: bolder;
             font-size: 13px;
-            &.here{
+
+            &.here {
                 color: #2f55d4;
             }
         }

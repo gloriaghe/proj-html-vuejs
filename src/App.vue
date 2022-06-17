@@ -1,20 +1,29 @@
 <template>
+<!-- font -->
+  
+
+    <!-- app -->
   <div id="app">
-    <HeaderLandrick/>
-    <!-- jumbotron -->
-  <main></main>
-  <footer></footer>
+    <div id="container">
+      <HeaderLandrick />
+      <JumbotronApp />
+      <main></main>
+      <footer></footer>
+    </div>
+
   </div>
 </template>
 
 <script>
 import HeaderLandrick from './components/HeaderLandrick.vue'
+import JumbotronApp from './components/JumbotronApp.vue'
+
 
 export default {
   name: 'App',
   components: {
     HeaderLandrick,
-
+    JumbotronApp
   }
 }
 </script>
@@ -22,10 +31,16 @@ export default {
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  color: #ADB5BD;
+  font-size: 18px;
+  color: #8492a6;
+
+  #container {
+    width: 65%;
+    margin: 0 auto;
+  }
 }
 
-*{
+* {
   border: 0;
   margin: 0;
   box-sizing: border-box;
