@@ -7,7 +7,9 @@
     <div id="container">
       <HeaderLandrick />
       <JumbotronApp />
-      <main></main>
+      <main>
+        
+      </main>
       <footer></footer>
     </div>
 
