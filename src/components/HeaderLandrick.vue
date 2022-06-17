@@ -54,6 +54,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@mixin colorBlue {
+  color:#2f55d4
+  };
+
 header {
     display: flex;
     justify-content: space-between;
@@ -74,7 +78,7 @@ header {
             font-size: 13px;
 
             &.here {
-                color: #2f55d4;
+                @include colorBlue;
             }
         }
     }
@@ -93,7 +97,7 @@ header {
             background-color: #e4e9f8;
             padding: 9px;
             border-radius: 5px;
-            color: #2f55d4;
+            @include colorBlue;
         }
     }
 }
