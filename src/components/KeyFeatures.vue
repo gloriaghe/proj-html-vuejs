@@ -9,8 +9,7 @@
                 <h3>Modular</h3>
                 <span>Composed in a pseudo-Latin language wich more or less corresponds.</span>
                 <a href="#">
-                    <span>Read More</span>
-                    <font-awesome-icon icon="fa-solid fa-angle-right" />
+                    <span>Read More  <font-awesome-icon icon="fa-solid fa-angle-right" /></span>
                 </a>
             </a>
             <a href="#" class="containerProperties">
@@ -18,8 +17,7 @@
                 <h3>Responsive</h3>
                 <span>Composed in a pseudo-Latin language wich more or less corresponds.</span>
                 <a href="#">
-                    <span>Read More</span>
-                    <font-awesome-icon icon="fa-solid fa-angle-right" />
+                    <span>Read More  <font-awesome-icon icon="fa-solid fa-angle-right" /></span>
                 </a>
             </a>
             <a href="#" class="containerProperties">
@@ -27,8 +25,7 @@
                 <h3>Customizable</h3>
                 <span>Composed in a pseudo-Latin language wich more or less corresponds.</span>
                 <a href="#">
-                    <span>Read More</span>
-                    <font-awesome-icon icon="fa-solid fa-angle-right" />
+                    <span>Read More  <font-awesome-icon icon="fa-solid fa-angle-right" /></span>
                 </a>
             </a>
             <a href="#" class="containerProperties">
@@ -37,8 +34,12 @@
                 <h3>Scalable</h3>
                 <span>Composed in a pseudo-Latin language wich more or less corresponds.</span>
                 <a href="#">
-                    <span>Read More</span>
-                    <font-awesome-icon icon="fa-solid fa-angle-right" />
+                    <span>
+                        Read More  
+                        <i>
+                            <font-awesome-icon icon="fa-solid fa-angle-right" />
+                        </i>
+                    </span>      
                 </a>
             </a>
         </div>
@@ -98,13 +99,22 @@ section {
                 margin-bottom: 20px;
             }
 
+            span{
+                width: 80%;
+            }
+
             a {
                 text-decoration: none;
                 @include colorBlue;
                 margin-top: 20px;
+                display: flex;
 
-                span {
-                    margin-right: 20px;
+                span{
+                    font-size: 15px;
+
+                    i{
+                        font-size: 10px;
+                    }
                 }
             }
         }

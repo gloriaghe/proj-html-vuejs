@@ -103,6 +103,7 @@ export default {
                 font-size: 40px;
                 margin: 20px 0;
                 width: 80%;
+                line-height: 50px;
             }
     
             #buttonspace {

@@ -45,6 +45,7 @@ export default {
   font-size: 16px;
   color: #8492a6;
   line-height: 25px;
+  letter-spacing: 0.5px;
 
   #container {
     width: 65%;
@@ -52,6 +53,7 @@ export default {
 
     h2 {
       font-size: 30px;
+      font-weight: 400;
       color: black;
     }
   }
