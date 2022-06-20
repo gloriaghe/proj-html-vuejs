@@ -9,9 +9,13 @@
       <JumbotronApp />
       <main>
         <KeyFeatures />
-        <QuickStart/>
+        <QuickStart />
+        <BuildTools />
+        <PriceLandrick />
+        <StartLandrick />
       </main>
-      <footer></footer>
+      <FooterLandrick />
+
     </div>
 
   </div>
@@ -22,6 +26,11 @@ import HeaderLandrick from './components/HeaderLandrick.vue'
 import JumbotronApp from './components/JumbotronApp.vue'
 import KeyFeatures from './components/KeyFeatures.vue'
 import QuickStart from './components/QuickStart.vue'
+import BuildTools from './components/BuildTools.vue'
+import PriceLandrick from './components/PriceLandrick.vue'
+import StartLandrick from './components/StartLandrick.vue'
+import FooterLandrick from './components/FooterLandrick.vue'
+
 
 
 export default {
@@ -30,7 +39,11 @@ export default {
     HeaderLandrick,
     JumbotronApp,
     KeyFeatures,
-    QuickStart
+    QuickStart,
+    BuildTools,
+    PriceLandrick,
+    StartLandrick,
+    FooterLandrick
   }
 }
 </script>
@@ -38,13 +51,15 @@ export default {
 <style lang="scss">
 @mixin colorBlue {
   color: #2f55d4
-};
+}
+
+;
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   color: #8492a6;
-  line-height: 25px;
+  line-height: 30px;
   letter-spacing: 0.5px;
 
   #container {

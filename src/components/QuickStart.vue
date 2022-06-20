@@ -19,19 +19,19 @@
                 claps.js
             </span>
         </div>
-        <div id="check">
-            <a href="#">
+        <div id="containerCheck">
+            <div>
                 <span class="green checkBorder">
                     <font-awesome-icon icon="fa-solid fa-check" />
                 </span>
                 Organize your data
-            </a>
-            <a href="#">
+            </div>
+            <div>
                 <span class="green checkBorder">
                     <font-awesome-icon icon="fa-solid fa-check" />
                 </span>
                 Work with any team
-            </a>
+            </div>
 
         </div>
 
@@ -135,13 +135,16 @@ section {
         color: #2eca8b;
     }
 
-    #check {
+    #containerCheck {
         padding-top: 15px;
         text-align: start;
 
-        a {
+        div {
             margin-right: 10px;
 
+            .green {
+                color: #2eca8b;
+            }
 
             .checkBorder {
                 border: 1px solid #2eca8b;

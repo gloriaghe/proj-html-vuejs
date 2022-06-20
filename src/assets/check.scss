@@ -1,0 +1,29 @@
+@mixin colorBlue {
+    color: #2f55d4
+}
+
+
+#containerCheck {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: start;
+
+    div {
+        margin-right: 10px;
+
+        .green {
+            color: #2eca8b;
+        }
+        .blue{
+            @include colorBlue;
+
+        }
+        .checkBorder {
+            border: 1px solid ;
+            border-radius: 50%;
+            padding: 4px;
+            font-size: 10px;
+        }
+    }
+
+}
