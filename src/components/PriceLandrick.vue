@@ -180,7 +180,7 @@ export default {
     margin: 100px 0;
 
     #presentation {
-        width: 65%;
+        width: 60%;
         margin: 50px auto;
         text-align: center;
 

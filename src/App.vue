@@ -1,9 +1,5 @@
 <template>
-  <!-- font -->
-
-
-  <!-- app -->
-  <div id="app">
+    <div id="app">
     <div id="container">
       <HeaderLandrick />
       <JumbotronApp />
@@ -14,9 +10,9 @@
         <PriceLandrick />
         <StartLandrick />
       </main>
-      <FooterLandrick />
 
     </div>
+      <FooterLandrick />
 
   </div>
 </template>
@@ -70,6 +66,10 @@ export default {
       font-size: 30px;
       font-weight: 400;
       color: black;
+    }
+
+    main{
+      margin-bottom: 70px;
     }
   }
 }
