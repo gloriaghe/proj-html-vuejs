@@ -2,7 +2,8 @@
     <section>
         <strong>Quickstart</strong>
         <h2>Awesome isn't it? Let's dive in!</h2>
-        <span>Start working with <strong>Landrick</strong> that can provide everithing you need to generate awareness,
+        <span id="textQuickstart">Start working with <strong>Landrick</strong> that can provide everithing you need to
+            generate awareness,
             drive traffic, connect.</span>
         <div id="containerProgram">
             <div id="program">
@@ -12,14 +13,28 @@
                 <a href="#">github</a>
             </div>
             <span>
-                <span class="dollaro">$ </span>
+                <span class="green">$ </span>
                 npm install
-                <span>-g </span>
+                <span class="green">-g </span>
                 claps.js
             </span>
         </div>
-        <a href="#">Organize your data</a>
-        <a href="#">Work with any team</a>
+        <div id="check">
+            <a href="#">
+                <span class="green checkBorder">
+                    <font-awesome-icon icon="fa-solid fa-check" />
+                </span>
+                Organize your data
+            </a>
+            <a href="#">
+                <span class="green checkBorder">
+                    <font-awesome-icon icon="fa-solid fa-check" />
+                </span>
+                Work with any team
+            </a>
+
+        </div>
+
     </section>
 </template>
 
@@ -50,6 +65,9 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 65%;
+    margin: 0 auto;
+    padding-bottom: 80px;
 
     strong {
         @include colorBlue;
@@ -63,10 +81,15 @@ section {
         @include a-no-decoration
     }
 
+    #textQuickstart {
+        width: 70%;
+        text-align: center;
+    }
+
     #containerProgram {
         background-color: #3c4858;
         height: 139px;
-        width: 730px;
+        width: 100%;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
@@ -107,5 +130,29 @@ section {
             padding-top: 20px;
         }
     }
+
+    .green {
+        color: #2eca8b;
+    }
+
+    #check {
+        padding-top: 15px;
+        text-align: start;
+
+        a {
+            margin-right: 10px;
+
+
+            .checkBorder {
+                border: 1px solid #2eca8b;
+                border-radius: 50%;
+                padding: 4px;
+                font-size: 10px;
+            }
+        }
+
+    }
+
+
 }
 </style>
