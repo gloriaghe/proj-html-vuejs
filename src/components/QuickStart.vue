@@ -50,6 +50,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import '../assets/check.scss';
+
 @mixin colorBlue {
     color: #2f55d4
 }
@@ -136,25 +138,15 @@ section {
     }
 
     #containerCheck {
-        padding-top: 15px;
-        text-align: start;
+        display: flex;
+        width: 100%;
 
-        div {
-            margin-right: 10px;
-
-            .green {
-                color: #2eca8b;
-            }
-
-            .checkBorder {
-                border: 1px solid #2eca8b;
-                border-radius: 50%;
-                padding: 4px;
-                font-size: 10px;
-            }
+        div{
+            margin-right: 30px;
         }
-
     }
+
+    
 
 
 }

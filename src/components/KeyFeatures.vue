@@ -42,7 +42,6 @@
                 </a>
             </a>
             <a href="#" class="containerProperties">
-                <!-- <font-awesome-icon icon="fa-solid fa-arrows-maximize" /> -->
                 <font-awesome-icon icon="fa-solid fa-layer-group" class="icon" />
                 <h3>Scalable</h3>
                 <span>Composed in a pseudo-Latin language wich more or less corresponds.</span>
@@ -143,6 +142,7 @@ section {
                 @include colorBlue;
                 margin-top: 20px;
                 display: flex;
+                font-weight: bold;
 
                 span {
                     font-size: 15px;

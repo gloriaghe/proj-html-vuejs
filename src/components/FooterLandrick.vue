@@ -189,7 +189,7 @@ footer {
         width: 65%;
         margin: 0 auto;
         justify-content: space-between;
-        padding: 40px 0;
+        padding: 60px 0;
 
 
         .sectionFooterUp {

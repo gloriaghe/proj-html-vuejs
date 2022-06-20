@@ -52,7 +52,7 @@
                         Buy Now
                     </a>
                 </button>
-                <span>*No credit card required</span>
+                <span class="noCreditCard">*No credit card required</span>
             </div>
             <div class="containerSinglePrice">
                 <span>
@@ -100,8 +100,8 @@
                         Buy Now
                     </a>
                 </button>
-                <span>*No credit card required</span>
-            <img id="ribbon" src="../assets/img/Orange-Ribbon.png" alt="Best Price">
+                <span class="noCreditCard">*No credit card required</span>
+                <img id="ribbon" src="../assets/img/Orange-Ribbon.png" alt="Best Price">
             </div>
             <div class="containerSinglePrice">
                 <span>
@@ -149,7 +149,7 @@
                         Buy Now
                     </a>
                 </button>
-                <span>*No credit card required</span>
+                <span class="noCreditCard">*No credit card required</span>
             </div>
         </section>
     </section>
@@ -203,6 +203,14 @@ export default {
             border-radius: 20px;
             padding: 20px 20px;
             position: relative;
+            margin-top: 20px;
+
+
+            &:hover{
+                line-height: 32px;
+                border-bottom: 2px solid #2f55d4;
+                margin-top: 10px;
+            }            
 
             strong {
                 margin-left: 20px;
@@ -218,7 +226,11 @@ export default {
                 font-size: 35px;
             }
 
-            #ribbon{
+            .btBlue{
+                margin-bottom: 10px;
+            }
+            
+            #ribbon {
                 position: absolute;
                 top: 0;
                 right: 0;

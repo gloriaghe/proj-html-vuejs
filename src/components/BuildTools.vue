@@ -86,7 +86,7 @@ section {
     }
 
     #img {
-        width: 40%;
+        width: 45%;
 
         img {
             width: 80%;
