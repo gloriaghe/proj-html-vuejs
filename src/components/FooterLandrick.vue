@@ -6,9 +6,26 @@
                     <img id="logo" src="../assets/img/logo-light.png" alt="Logo landrick">
                     <span>Star working with Landrick that can provide everything you need to generate awareness, drive
                         traffic, connect.</span>
-                    <div>
+                    <div id="brands">
                         <a href="#">
-                            <!-- <font-awesome-icon icon="fa-brands fa-facebook-f" /> -->
+                            <span>
+                                <font-awesome-icon icon="fa-brands fa-facebook-f" />
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span>
+                                <font-awesome-icon icon="fa-brands fa-instagram" />
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span>
+                                <font-awesome-icon icon="fa-brands fa-twitter" />
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span>
+                                <font-awesome-icon icon="fa-brands fa-linkedin-in" />
+                            </span>
                         </a>
                     </div>
                 </div>
@@ -16,7 +33,9 @@
                     <h3>Company</h3>
                     <div v-for="(element, i) in company" :key="i">
                         <a href="element.link">
-                            <font-awesome-icon icon="fa-solid fa-angle-right" />
+                            <span class="angleRight">
+                                <font-awesome-icon icon="fa-solid fa-angle-right" />
+                            </span>
                             {{ element.text }}
                         </a>
 
@@ -26,7 +45,10 @@
                     <h3>Usefull Links</h3>
                     <div v-for="(element, i) in links" :key="i">
                         <a href="element.link">
-                            <font-awesome-icon icon="fa-solid fa-angle-right" />
+                            <span class="angleRight">
+                                <font-awesome-icon icon="fa-solid fa-angle-right" />
+                            </span>
+
                             {{ element.text }}
                         </a>
 
@@ -35,7 +57,7 @@
                 <div class="sectionFooterUp">
                     <h3>Newsletter</h3>
                     <span>Sign up and receive the latest tips via email.</span>
-                    <span>Write your email<span>*</span></span>
+                    <span>Write your email <span id="asterisco">*</span></span>
                     <input type="text" placeholder="Your Email:">
                     <button>Subscribe</button>
                 </div>
@@ -155,7 +177,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 footer {
-    background-color: #27314f;
+    background-color: #202942;
 
     a {
         text-decoration: none;
@@ -175,6 +197,11 @@ footer {
             flex-direction: column;
             max-width: 30%;
 
+            .angleRight {
+                font-size: 10px;
+                margin-right: 10px;
+            }
+
             #logo {
                 width: 40%;
                 margin-bottom: 20px;
@@ -183,6 +210,44 @@ footer {
             h3 {
                 color: white;
                 margin-bottom: 20px;
+            }
+
+            #brands {
+                margin-top: 20px;
+
+                a {
+                    border: 1px solid #8492a6;
+                    padding: 5px;
+                    border-radius: 5px;
+                    margin-right: 5px;
+
+                    span {
+                        font-size: 15px;
+                        padding: 5px;
+                    }
+                }
+
+            }
+
+            #asterisco {
+                color: #e43f52;
+            }
+
+            input {
+                background-color: #27314f;
+                border-radius: 10px;
+                color: white;
+                padding: 10px;
+                margin: 20px 0;
+            }
+
+            button {
+                background-color: #27314f;
+                border-radius: 10px;
+                color: #2f55d4;
+                padding: 10px;
+                border: 1px #2f55d4;
+                font-size: 18px;
             }
         }
     }

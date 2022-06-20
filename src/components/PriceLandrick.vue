@@ -101,6 +101,7 @@
                     </a>
                 </button>
                 <span>*No credit card required</span>
+            <img id="ribbon" src="../assets/img/Orange-Ribbon.png" alt="Best Price">
             </div>
             <div class="containerSinglePrice">
                 <span>
@@ -201,6 +202,7 @@ export default {
             border-bottom: 2px solid #adb5bd;
             border-radius: 20px;
             padding: 20px 20px;
+            position: relative;
 
             strong {
                 margin-left: 20px;
@@ -214,6 +216,13 @@ export default {
                 color: black;
                 margin: 20px 0 10px 0;
                 font-size: 35px;
+            }
+
+            #ribbon{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 70px;
             }
         }
 
