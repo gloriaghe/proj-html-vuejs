@@ -1,9 +1,11 @@
 <template>
     <header>
-        <img :src="imgLogo" :alt="imgAlt">
+        <a href="#">
+            <img :src="imgLogo" :alt="imgAlt">
+        </a>
         <nav>
             <a href="#" v-for="(item, i) in navBar" :key="i" :class="item.here ? 'here' : ''">
-                <span>{{ item.text }}</span>
+                <span>{{ item.text }} </span>
                 <font-awesome-icon icon="fa-solid fa-angle-down" v-if="i > 0" />
             </a>
         </nav>
@@ -98,6 +100,12 @@ header {
             padding: 9px;
             border-radius: 5px;
             @include colorBlue;
+            box-shadow: 2px 2px 3px #ADB5BD; 
+
+            &:hover{
+                background-color: #2f55d4;
+                color:white;
+            }
         }
     }
 }

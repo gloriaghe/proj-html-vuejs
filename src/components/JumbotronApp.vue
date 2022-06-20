@@ -91,10 +91,10 @@ export default {
             #titoletto {
                 border: 1px solid #ADB5BD;
                 background-color: #e4e9f8;
-                padding: 5px;
+                padding: 1px 5px;
                 border-radius: 15px;
                 color: #2f55d4;
-                font-size: 13px;
+                font-size: 12px;
                 font-weight: bold;
             }
     

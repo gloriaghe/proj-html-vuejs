@@ -1,7 +1,8 @@
 <template>
     <section>
         <h2>Key Features</h2>
-        <span>Start working with <a href="#">Landrick</a> that can provide everything you need to generate awarness,
+        <span>Start working with <a href="#" id="landrickName">Landrick</a> that can provide everything you need to
+            generate awarness,
             drive traffic, connect.</span>
         <div id="properties">
             <a href="#" class="containerProperties">
@@ -9,7 +10,11 @@
                 <h3>Modular</h3>
                 <span>Composed in a pseudo-Latin language wich more or less corresponds.</span>
                 <a href="#">
-                    <span>Read More  <font-awesome-icon icon="fa-solid fa-angle-right" /></span>
+                    <span>Read More
+                        <i>
+                            <font-awesome-icon icon="fa-solid fa-angle-right" />
+                        </i>
+                    </span>
                 </a>
             </a>
             <a href="#" class="containerProperties">
@@ -17,7 +22,11 @@
                 <h3>Responsive</h3>
                 <span>Composed in a pseudo-Latin language wich more or less corresponds.</span>
                 <a href="#">
-                    <span>Read More  <font-awesome-icon icon="fa-solid fa-angle-right" /></span>
+                    <span>Read More
+                        <i>
+                            <font-awesome-icon icon="fa-solid fa-angle-right" />
+                        </i>
+                    </span>
                 </a>
             </a>
             <a href="#" class="containerProperties">
@@ -25,7 +34,11 @@
                 <h3>Customizable</h3>
                 <span>Composed in a pseudo-Latin language wich more or less corresponds.</span>
                 <a href="#">
-                    <span>Read More  <font-awesome-icon icon="fa-solid fa-angle-right" /></span>
+                    <span>Read More
+                        <i>
+                            <font-awesome-icon icon="fa-solid fa-angle-right" />
+                        </i>
+                    </span>
                 </a>
             </a>
             <a href="#" class="containerProperties">
@@ -35,11 +48,11 @@
                 <span>Composed in a pseudo-Latin language wich more or less corresponds.</span>
                 <a href="#">
                     <span>
-                        Read More  
+                        Read More
                         <i>
                             <font-awesome-icon icon="fa-solid fa-angle-right" />
                         </i>
-                    </span>      
+                    </span>
                 </a>
             </a>
         </div>
@@ -63,6 +76,8 @@ export default {
     color: #8492a6;
 }
 
+;
+
 @mixin colorBlue {
     color: #2f55d4
 }
@@ -70,18 +85,33 @@ export default {
 ;
 
 section {
-    h2{
+
+    #landrickName {
+        @include colorBlue;
+        text-decoration: none;
+    }
+
+    h2 {
         margin-bottom: 20px;
     }
 
-    span{
+    span {
         width: 50%;
         display: block;
     }
 
     #properties {
         display: flex;
-        margin: 80px 0;
+        width: 90%;
+        margin: 80px auto;
+
+        a {
+            margin-top: 20px;
+        }
+
+        a:hover {
+            margin-top: -10px;
+        }
 
         .containerProperties {
             display: flex;
@@ -91,17 +121,22 @@ section {
 
             .icon {
                 @include colorBlue;
-                margin: 40px 0;
+                margin: 40px 20px;
                 align-self: flex-start;
+                font-size: 20px;
             }
 
             h3 {
                 margin-bottom: 20px;
+                color: #3c4858;
+                font-size: 17px;
             }
 
-            span{
+            span {
                 width: 80%;
             }
+
+
 
             a {
                 text-decoration: none;
@@ -109,10 +144,10 @@ section {
                 margin-top: 20px;
                 display: flex;
 
-                span{
+                span {
                     font-size: 15px;
 
-                    i{
+                    i {
                         font-size: 10px;
                     }
                 }

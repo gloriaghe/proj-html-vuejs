@@ -247,7 +247,9 @@ footer {
                 color: #2f55d4;
                 padding: 10px;
                 border: 1px #2f55d4;
+                box-shadow: 2px 2px 3px #2f55d4;
                 font-size: 18px;
+                cursor: pointer;
             }
         }
     }
