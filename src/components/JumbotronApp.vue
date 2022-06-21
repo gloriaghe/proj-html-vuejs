@@ -143,6 +143,18 @@ $small: 900px;
         align-items: center;
         margin: 130px 0;
 
+        @media screen and (max-width: $small ) {
+            & {
+                flex-wrap: wrap;
+            }
+
+            img {
+                margin-right: 20px;
+                margin-top: 20px;
+            }
+
+        }
+
         img {
             width: 80px;
         }

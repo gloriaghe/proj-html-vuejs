@@ -157,6 +157,8 @@ export default {
 ;
 @import '../assets/button.scss';
 $small: 1000px;
+$xsmall: 700px;
+
 
 header {
     display: flex;
@@ -175,6 +177,14 @@ header {
         & {
             width: 100%;
             margin-left: 0;
+            justify-content: space-around
+        }
+    }
+
+    @media screen and (max-width: $xsmall ) {
+        & {
+            flex-wrap: wrap;
+            height: 110px;
         }
     }
 
@@ -250,6 +260,14 @@ header {
                 0% {
                     transform: rotate(360deg);
                 }
+            }
+        }
+
+        @media screen and (max-width: $xsmall ) {
+            & {
+                left: 0px;
+                top: 120px;
+
             }
         }
 

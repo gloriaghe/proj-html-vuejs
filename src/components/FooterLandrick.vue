@@ -195,7 +195,7 @@ footer {
 
         @media screen and (max-width: $small ) {
             & {
-                width: 95%;
+                width: 90%;
                 flex-wrap: wrap;
             }
         }
@@ -282,7 +282,7 @@ footer {
 
             @media screen and (max-width: $small ) {
             & {
-                width: 95%;
+                width: 90%;
                 flex-wrap: wrap;
             }
         }
