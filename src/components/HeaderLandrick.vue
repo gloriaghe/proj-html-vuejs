@@ -16,10 +16,11 @@
             </a>
         </div>
 
+
         <div id="ingranaggio" @click="colorChange = !colorChange">
             <img src="../assets/img/ingranaggio.png" alt="impostazioni sito">
             <div id="opzioniColore" v-if="colorChange">
-                <h2>Theme option</h2>
+                <h2 id="titleOpztion">Theme option</h2>
                 <div id="buttonspace">
                     <button class="btBlue">
                         <a href="#">Light</a>
@@ -30,6 +31,7 @@
                 </div>
             </div>
         </div>
+
 
     </header>
 </template>
@@ -71,7 +73,11 @@ export default {
                 element.here = false
             });
             attivo.here = true
+        },
+        changeColor() {
+
         }
+
     }
 }
 </script>
@@ -140,37 +146,51 @@ header {
         }
     }
 
-    #ingranaggio img {
+
+
+    #ingranaggio {
         position: fixed;
         top: 180px;
         left: 10px;
-        width: 30px;
-        animation: mymove 3s infinite;
-    }
 
-    @keyframes mymove {
-        0% {
-            transform: rotate(360deg);
-        }
-    }
+        & img {
+            width: 30px;
+            animation: mymove 3s infinite;
 
-    #opzioniColore {
-        position: absolute;
-        left: -220px;
-        top: 220px;
-
-        #buttonspace {
-            display: flex;
-            flex-direction: column;
-            height: 130px;
-            width: 50%;
-            margin-left: 25%;
-            justify-content: space-around;
-
-            button{
-                padding: 7px 10px;
+            @keyframes mymove {
+                0% {
+                    transform: rotate(360deg);
+                }
             }
         }
+
+        #opzioniColore {
+            position: absolute;
+            left: 0px;
+            top: 25px;
+            background-color: white;
+            width: 150px;
+
+            #titleOpztion {
+                font-size: 22px;
+            }
+
+            #buttonspace {
+                display: flex;
+                flex-direction: column;
+                height: 130px;
+                width: 50%;
+                margin-left: 25%;
+                justify-content: space-around;
+
+                button {
+                    padding: 7px 10px;
+                }
+            }
+        }
+
     }
+
+
 }
 </style>
