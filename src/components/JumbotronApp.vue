@@ -12,7 +12,7 @@
                     <button class="btBlue">
                         <a href="#">Get Started</a>
                     </button>
-                    <button>
+                    <button id="btDocumentation">
                         <a href="#">Documentation</a>
                     </button>
                 </div>
@@ -39,27 +39,27 @@ export default {
                     link: "#",
                     name: "Amazon Link"
                 },
-                 {
+                {
                     img: "google.svg",
                     link: "#",
                     name: "Google Link"
                 },
-                 {
+                {
                     img: "lenovo.svg",
                     link: "#",
                     name: "Lenovo Link"
                 },
-                 {
+                {
                     img: "paypal.svg",
                     link: "#",
                     name: "PayPal Link"
                 },
-                 {
+                {
                     img: "shopify.svg",
                     link: "#",
                     name: "Shopify Link"
                 },
-                 {
+                {
                     img: "spotify.svg",
                     link: "#",
                     name: "Spotify Link"
@@ -74,20 +74,20 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-#sectioncontainer{
+#sectioncontainer {
 
     #jumbo {
         display: flex;
-        margin-top: 80px;
+        margin-top: 160px;
         justify-content: space-between;
-    
+
         div {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
             width: 50%;
-    
+
             #titoletto {
                 border: 1px solid #ADB5BD;
                 background-color: #e4e9f8;
@@ -97,7 +97,7 @@ export default {
                 font-size: 12px;
                 font-weight: bold;
             }
-    
+
             h1 {
                 color: black;
                 font-size: 40px;
@@ -105,24 +105,33 @@ export default {
                 width: 80%;
                 line-height: 50px;
             }
-    
+
             #buttonspace {
                 margin: 20px 0;
                 display: inline-block;
                 width: 100%;
 
-                @import '../assets/button.scss'
+                @import '../assets/button.scss';
+
+                #btDocumentation:hover {
+                    background-color: #2f55d4;
+                    border: none;
+
+                    a {
+                        color: white;
+                    }
+                }
             }
         }
     }
 
-    #site{
+    #site {
         display: flex;
         justify-content: space-around;
         align-items: center;
         margin: 130px 0;
 
-        img{
+        img {
             width: 80px;
         }
     }

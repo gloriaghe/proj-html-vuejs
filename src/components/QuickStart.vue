@@ -6,11 +6,8 @@
             generate awareness,
             drive traffic, connect.</span>
         <div id="containerProgram">
-            <div id="program">
-                <a href="#">npm</a>
-                <a href="#">nuget</a>
-                <a href="#">spm</a>
-                <a href="#">github</a>
+            <div id="program" >
+                <a @click="clickHere(element)" v-for="(element, i) in siti" :key="i" :class="element.here? 'here':''">{{element.name}}</a>
             </div>
             <span>
                 <span class="green">$ </span>
@@ -43,6 +40,32 @@ export default {
     name: 'QuickStart',
     data() {
         return {
+        siti:[
+            {
+                name: "npm",
+                here: true
+            },
+            {
+                name: "nuget",
+                here: false
+            },
+            {
+                name: "spm",
+                here: false
+            },
+            {
+                name: "github",
+                here: false
+            }
+        ]
+        }
+    },
+    methods: {
+        clickHere(elementActive){
+            this.siti.forEach(element => {
+                element.here= false
+            });
+            elementActive.here = true
         }
     }
 }
@@ -115,7 +138,7 @@ section {
                 padding: 10px 0px;
             }
 
-            & a:first-child {
+            .here {
                 background-color: #3c4858;
                 border-left: 0.2px solid #adb5bd;
                 border-right: 0.2px solid #adb5bd;
