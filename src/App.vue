@@ -97,9 +97,9 @@ $small: 1000px;
     &.light h1 {
       color: white;
     }
-    
+
     &.light header{
-      background-color: #8492a6;
+      background-color: #94abe9;
     }
 
     @media screen and (max-width: $medium ) {
