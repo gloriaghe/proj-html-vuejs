@@ -82,6 +82,7 @@ $small: 1000px;
 
   &.dark {
     background-color: rgb(33, 30, 30);
+    color: #b2c1d7;
   }
 
 
