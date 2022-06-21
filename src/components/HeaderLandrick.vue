@@ -4,9 +4,13 @@
             <img id="logo" :src="imgLogo" :alt="imgAlt">
         </a>
         <nav>
-            <a href="#" v-for="(item, i) in navBar" @click="clickHere(item)" :key="i" :class="item.here ? 'here' : ''">
+            <a href="#" v-for="(item, i) in navBar" @dblclick="noClick(item)" @click="clickHere(item)" :key="i"
+                :class="item.here ? 'here' : ''">
                 <span>{{ item.text }} </span>
                 <font-awesome-icon icon="fa-solid fa-angle-down" v-if="i > 0" />
+                <div id="internalLink" v-if="item.navClick === true">
+                    <a v-for="(element, i) in item.linkInterno" :href="element.link" :key="i">{{ element.name }}</a>
+                </div>
             </a>
         </nav>
 
@@ -47,19 +51,73 @@ export default {
             navBar: [
                 {
                     text: "HOME",
-                    here: false
+                    here: false,
+                    linkInterno: false
                 },
                 {
                     text: "LANDING",
-                    here: true
+                    here: true,
+                    linkInterno: [
+                        {
+                            name: "SASS",
+                            link: "#"
+                        },
+                        {
+                            name: "DEVELOPER",
+                            link: "#"
+                        },
+                        {
+                            name: "SHOP",
+                            link: "#"
+                        },
+                        {
+                            name: "PRODUCT",
+                            link: "#"
+                        },
+                    ],
+                    navClick: false,
                 },
                 {
                     text: "PAGES",
-                    here: false
+                    here: false,
+                    linkInterno: [
+                        {
+                            name: "COMPANY",
+                            link: "#"
+                        },
+                        {
+                            name: "ACCOUNT",
+                            link: "#"
+                        },
+                        {
+                            name: "HELP CENTER",
+                            link: "#"
+                        },
+                        {
+                            name: "UTILITY",
+                            link: "#"
+                        },
+                    ],
+                    navClick: false,
                 },
                 {
                     text: "DOCS",
-                    here: false
+                    here: false,
+                    linkInterno: [
+                        {
+                            name: "DOCUMENTATION",
+                            link: "#"
+                        },
+                        {
+                            name: "COMPONENTS",
+                            link: "#"
+                        },
+                        {
+                            name: "WIDGET",
+                            link: "#"
+                        }
+                    ],
+                    navClick: false,
                 },
             ],
             navFont: ['fa-solid fa-magnifying-glass', 'fa-brands fa-github', 'fa-brands fa-stack-overflow', 'fa-regular fa-user'],
@@ -69,13 +127,21 @@ export default {
     },
     methods: {
         clickHere(attivo) {
-            this.navBar.forEach(element => {
-                element.here = false
-            });
-            attivo.here = true
-        },
-        changeColor() {
+            if (attivo.navClick === false) {
 
+                this.navBar.forEach(element => {
+                    element.here = false
+                    element.navClick = false
+                });
+                attivo.here = true;
+                attivo.navClick = true
+            } else {
+                attivo.here = false;
+                attivo.navClick = false
+            }
+        },
+        noClick(item) {
+            item.navClick = false
         }
 
     }
@@ -109,17 +175,32 @@ header {
     }
 
     nav {
+
         a {
             color: #3c4858;
             text-decoration: none;
             margin-right: 35px;
             font-weight: bolder;
             font-size: 13px;
+            position: relative;
+
 
             &.here {
                 @include colorBlue;
             }
+
+            #internalLink {
+                position: absolute;
+                top: 20px;
+                left: 0px;
+                background-color: white;
+
+                a {
+                    display: block;
+                }
+            }
         }
+
     }
 
     div {
