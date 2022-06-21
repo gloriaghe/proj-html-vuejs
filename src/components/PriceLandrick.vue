@@ -6,151 +6,34 @@
                 awarness, drive traffic, connect.</span>
         </section>
         <section id="price">
-            <div class="containerSinglePrice">
+             <div class="containerSinglePrice" v-for="(element, i) in priceExplanation" :key="i">
                 <span>
-                    <strong>Basic</strong>
+                    <strong>{{element.name}}</strong>
                 </span>
                 <h3>
-                    <font-awesome-icon icon="fa-solid fa-dollar-sign" />9.00
+                    <font-awesome-icon icon="fa-solid fa-dollar-sign" />{{element.price}}
                 </h3>
                 <span>Per Month</span>
-                <span>All the basics for businesses that are just getting startes.</span>
+                <span>{{element.text}}</span>
                 <div id="containerCheck">
-                    <div>
+                    <div v-for="(element, i) in element.data" :key="i">
                         <span class="blue checkBorder">
                             <font-awesome-icon icon="fa-solid fa-check" />
                         </span>
-                        Full Access
+                        {{element}}
                     </div>
-                    <div>
-                        <span class="blue checkBorder">
-                            <font-awesome-icon icon="fa-solid fa-check" />
-                        </span>
-                        Enhanced Security
-                    </div>
-                    <div>
-                        <span class="blue checkBorder">
-                            <font-awesome-icon icon="fa-solid fa-check" />
-                        </span>
-                        Source files
-                    </div>
-                    <div>
-                        <span class="blue checkBorder">
-                            <font-awesome-icon icon="fa-solid fa-check" />
-                        </span>
-                        1 Domain Free
-                    </div>
-                    <div>
-                        <span class="blue checkBorder">
-                            <font-awesome-icon icon="fa-solid fa-check" />
-                        </span>
-                        Enhanced Security
-                    </div>
+                    
                 </div>
                 <button class="btBlue">
-                    <a href="#">
+                    <a :href="element.link">
                         Buy Now
                     </a>
                 </button>
                 <span class="noCreditCard">*No credit card required</span>
+                 <img id="ribbon" v-if="element.best" src="../assets/img/Orange-Ribbon.png" alt="Best Price">
+
             </div>
-            <div class="containerSinglePrice">
-                <span>
-                    <strong>Business</strong>
-                </span>
-                <h3>
-                    <font-awesome-icon icon="fa-solid fa-dollar-sign" />39.00
-                </h3>
-                <span>Per Month</span>
-                <span>Better for growing businesses that want more customers.</span>
-                <div id="containerCheck">
-                    <div>
-                        <span class="blue checkBorder">
-                            <font-awesome-icon icon="fa-solid fa-check" />
-                        </span>
-                        Full Access
-                    </div>
-                    <div>
-                        <span class="blue checkBorder">
-                            <font-awesome-icon icon="fa-solid fa-check" />
-                        </span>
-                        Enhanced Security
-                    </div>
-                    <div>
-                        <span class="blue checkBorder">
-                            <font-awesome-icon icon="fa-solid fa-check" />
-                        </span>
-                        Source files
-                    </div>
-                    <div>
-                        <span class="blue checkBorder">
-                            <font-awesome-icon icon="fa-solid fa-check" />
-                        </span>
-                        1 Domain Free
-                    </div>
-                    <div>
-                        <span class="blue checkBorder">
-                            <font-awesome-icon icon="fa-solid fa-check" />
-                        </span>
-                        Enhanced Security
-                    </div>
-                </div>
-                <button class="btBlue">
-                    <a href="#">
-                        Buy Now
-                    </a>
-                </button>
-                <span class="noCreditCard">*No credit card required</span>
-                <img id="ribbon" src="../assets/img/Orange-Ribbon.png" alt="Best Price">
-            </div>
-            <div class="containerSinglePrice">
-                <span>
-                    <strong>Enterprise</strong>
-                </span>
-                <h3>
-                    <font-awesome-icon icon="fa-solid fa-dollar-sign" />79.00
-                </h3>
-                <span>Per Month</span>
-                <span>Advanced features for pros who need more customization.</span>
-                <div id="containerCheck">
-                    <div>
-                        <span class="blue checkBorder">
-                            <font-awesome-icon icon="fa-solid fa-check" />
-                        </span>
-                        Full Access
-                    </div>
-                    <div>
-                        <span class="blue checkBorder">
-                            <font-awesome-icon icon="fa-solid fa-check" />
-                        </span>
-                        Enhanced Security
-                    </div>
-                    <div>
-                        <span class="blue checkBorder">
-                            <font-awesome-icon icon="fa-solid fa-check" />
-                        </span>
-                        Source files
-                    </div>
-                    <div>
-                        <span class="blue checkBorder">
-                            <font-awesome-icon icon="fa-solid fa-check" />
-                        </span>
-                        1 Domain Free
-                    </div>
-                    <div>
-                        <span class="blue checkBorder">
-                            <font-awesome-icon icon="fa-solid fa-check" />
-                        </span>
-                        Enhanced Security
-                    </div>
-                </div>
-                <button class="btBlue">
-                    <a href="#">
-                        Buy Now
-                    </a>
-                </button>
-                <span class="noCreditCard">*No credit card required</span>
-            </div>
+            
         </section>
     </section>
 </template>
@@ -160,7 +43,32 @@ export default {
     name: 'PriceLandrick',
     data() {
         return {
-
+            priceExplanation: [
+                {
+                    name: "Basic",
+                    price: "9.00",
+                    text: "All the basics for businesses that are just getting startes.",
+                    data: ["Full Access", "Enhanced Security", "Source files", "1 Domain Free", "Enhanced Security"],
+                    link: "#",
+                    best: false
+                },
+                {
+                    name: "Business",
+                    price: "39.00",
+                    text: "Better for growing businesses that want more customers.",
+                    data: ["Full Access", "Enhanced Security", "Source files", "1 Domain Free", "Enhanced Security"],
+                    link: "#",
+                    best: true
+                },
+                {
+                    name: "Enterprise",
+                    price: "79.00",
+                    text: "Advanced features for pros who need more customization.",
+                    data: ["Full Access", "Enhanced Security", "Source files", "1 Domain Free", "Enhanced Security"],
+                    link: "#",
+                    best: false
+                },
+            ]
 
         }
     },
@@ -209,7 +117,7 @@ $xsmall: 750px;
 
             @media screen and (max-width: $xsmall ) {
                 & {
-                    
+
                     width: 80%;
                     margin: 20px auto;
 

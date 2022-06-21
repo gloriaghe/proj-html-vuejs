@@ -4,12 +4,13 @@
         <span>Start working with <a href="#" id="landrickName">Landrick</a> that can provide everything you need to
             generate awarness,
             drive traffic, connect.</span>
+
         <div id="properties">
-            <a href="#" class="containerProperties">
-                <font-awesome-icon icon="fa-solid fa-layer-group" class="icon" />
-                <h3>Modular</h3>
-                <span>Composed in a pseudo-Latin language wich more or less corresponds.</span>
-                <a href="#">
+            <a v-for="(element, i) in properties" :href="element.i" class="containerProperties" :key="i">
+                <font-awesome-icon :icon='element.font' class="icon" />
+                <h3>{{element.name}}</h3>
+                <span>{{element.text}}</span>
+                <a :href="element.link">
                     <span>Read More
                         <i>
                             <font-awesome-icon icon="fa-solid fa-angle-right" />
@@ -17,43 +18,7 @@
                     </span>
                 </a>
             </a>
-            <a href="#" class="containerProperties">
-                <font-awesome-icon icon="fa-solid fa-layer-group" class="icon" />
-                <h3>Responsive</h3>
-                <span>Composed in a pseudo-Latin language wich more or less corresponds.</span>
-                <a href="#">
-                    <span>Read More
-                        <i>
-                            <font-awesome-icon icon="fa-solid fa-angle-right" />
-                        </i>
-                    </span>
-                </a>
-            </a>
-            <a href="#" class="containerProperties">
-                <font-awesome-icon icon="fa-solid fa-layer-group" class="icon" />
-                <h3>Customizable</h3>
-                <span>Composed in a pseudo-Latin language wich more or less corresponds.</span>
-                <a href="#">
-                    <span>Read More
-                        <i>
-                            <font-awesome-icon icon="fa-solid fa-angle-right" />
-                        </i>
-                    </span>
-                </a>
-            </a>
-            <a href="#" class="containerProperties">
-                <font-awesome-icon icon="fa-solid fa-layer-group" class="icon" />
-                <h3>Scalable</h3>
-                <span>Composed in a pseudo-Latin language wich more or less corresponds.</span>
-                <a href="#">
-                    <span>
-                        Read More
-                        <i>
-                            <font-awesome-icon icon="fa-solid fa-angle-right" />
-                        </i>
-                    </span>
-                </a>
-            </a>
+        
         </div>
     </section>
 </template>
@@ -63,6 +28,32 @@ export default {
     name: 'KeyFeatures',
     data() {
         return {
+            properties: [
+                {
+                    font: 'fa-solid fa-layer-group',
+                    name: "Modular",
+                    text: "Composed in a pseudo-Latin language wich more or less corresponds.",
+                    link: "#"
+                },
+                {
+                    font: "fa-solid fa-display",
+                    name: "Responsive",
+                    text: "Composed in a pseudo-Latin language wich more or less corresponds.",
+                    link: "#"
+                },
+                {
+                    font: "fa-solid fa-up-right-and-down-left-from-center",
+                    name: "Customizable",
+                    text: "Composed in a pseudo-Latin language wich more or less corresponds.",
+                    link: "#"
+                },
+                {
+                    font: "fa-solid fa-arrows-to-circle",
+                    name: "Scalable",
+                    text: "Composed in a pseudo-Latin language wich more or less corresponds.",
+                    link: "#"
+                }
+            ]
         }
     }
 }
@@ -145,7 +136,7 @@ section {
             }
 
             span {
-                width: 80%;
+                width: 90%;
             }
 
 
