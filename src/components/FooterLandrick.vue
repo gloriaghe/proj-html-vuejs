@@ -176,6 +176,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+$small: 1000px;
+
 footer {
     background-color: #202942;
 
@@ -191,11 +193,24 @@ footer {
         justify-content: space-between;
         padding: 60px 0;
 
+        @media screen and (max-width: $small ) {
+            & {
+                width: 95%;
+                flex-wrap: wrap;
+            }
+        }
 
         .sectionFooterUp {
             display: flex;
             flex-direction: column;
             max-width: 30%;
+
+            @media screen and (max-width: $small ) {
+                & {
+                    min-width: 45%;
+                    margin-bottom: 20px;
+                }
+            }
 
             .angleRight {
                 font-size: 10px;
@@ -264,6 +279,13 @@ footer {
             width: 65%;
             margin: 0 auto;
             height: 80px;
+
+            @media screen and (max-width: $small ) {
+            & {
+                width: 95%;
+                flex-wrap: wrap;
+            }
+        }
 
             #cBorder {
                 border: 1px solid #8492a6;

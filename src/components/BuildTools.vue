@@ -56,11 +56,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
-
 @import '../assets/button.scss';
 @import '../assets/check.scss';
-
+$xsmall: 700px;
 
 section {
     display: flex;
@@ -77,12 +75,17 @@ section {
             line-height: 40px;
 
         }
-        
+
         #arrow {
             font-size: 12px;
             margin-left: 5px;
         }
 
+        @media screen and (max-width: $xsmall ) {
+            & {
+                width: 100%;
+            }
+        }
     }
 
     #img {
@@ -92,6 +95,13 @@ section {
             width: 80%;
             object-fit: cover;
         }
+
+        @media screen and (max-width: $xsmall ) {
+            & {
+                display: none;
+            }
+        }
+
     }
 }
 </style>

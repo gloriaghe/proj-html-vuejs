@@ -70,6 +70,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+$small: 900px;
+
+
 @mixin a-no-decoration {
     text-decoration: none;
     color: #8492a6;
@@ -101,8 +104,18 @@ section {
 
     #properties {
         display: flex;
-        width: 90%;
+        width: 100%;
         margin: 80px auto;
+
+        @media screen and (max-width: $small ) {
+            & {
+               flex-wrap: wrap;
+            }
+
+            .containerProperties{
+                width: 50%;
+            }
+        }
 
         a {
             margin-top: 20px;

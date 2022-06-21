@@ -156,6 +156,7 @@ export default {
 
 ;
 @import '../assets/button.scss';
+$small: 1000px;
 
 header {
     display: flex;
@@ -169,6 +170,13 @@ header {
     left: 0;
     z-index: 1000;
     background-color: white;
+
+    @media screen and (max-width: $small ) {
+        & {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
 
     #logo {
         max-width: 140px;

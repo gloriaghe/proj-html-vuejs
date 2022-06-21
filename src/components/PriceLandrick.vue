@@ -174,6 +174,7 @@ export default {
     color: #2f55d4
 }
 
+$xsmall: 750px;
 @import '../assets/button.scss';
 @import '../assets/check.scss';
 
@@ -194,6 +195,7 @@ export default {
         display: flex;
         justify-content: space-between;
         margin-bottom: 60px;
+        flex-wrap: wrap;
 
         .containerSinglePrice {
             width: 27%;
@@ -205,12 +207,20 @@ export default {
             position: relative;
             margin-top: 20px;
 
+            @media screen and (max-width: $xsmall ) {
+                & {
+                    
+                    width: 80%;
+                    margin: 20px auto;
 
-            &:hover{
+                }
+            }
+
+            &:hover {
                 line-height: 32px;
                 border-bottom: 2px solid #2f55d4;
                 margin-top: 10px;
-            }            
+            }
 
             strong {
                 margin-left: 20px;
@@ -226,10 +236,10 @@ export default {
                 font-size: 35px;
             }
 
-            .btBlue{
+            .btBlue {
                 margin-bottom: 10px;
             }
-            
+
             #ribbon {
                 position: absolute;
                 top: 0;

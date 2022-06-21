@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+  <div id="app">
     <div id="container">
       <HeaderLandrick />
       <JumbotronApp />
@@ -12,7 +12,7 @@
       </main>
 
     </div>
-      <FooterLandrick />
+    <FooterLandrick />
 
   </div>
 </template>
@@ -50,6 +50,9 @@ export default {
 }
 
 ;
+//media query
+$medium: 1400px;
+$small: 1000px;
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -62,13 +65,25 @@ export default {
     width: 65%;
     margin: 0 auto;
 
+    @media screen and (max-width: $medium ) {
+      & {
+        width: 80%;
+      }
+    }
+
+    @media screen and (max-width: $small ) {
+      & {
+        width: 90%;
+      }
+    }
+
     h2 {
       font-size: 30px;
       font-weight: 400;
       color: black;
     }
 
-    main{
+    main {
       margin-bottom: 70px;
     }
   }

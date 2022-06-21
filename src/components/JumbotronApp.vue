@@ -1,7 +1,7 @@
 <template>
     <div id="sectioncontainer">
         <section id="jumbo">
-            <div>
+            <div id="textJumbo">
                 <span id="titoletto">
                     Development
                 </span>
@@ -18,7 +18,7 @@
                 </div>
                 <span>Current Version: v2.6.0</span>
             </div>
-            <img src="../assets/img/about.png" alt="">
+            <img id="imgJumbo" src="../assets/img/about.png" alt="Immagine jumbo">
         </section>
         <section id="site">
             <a :href="item.link" v-for="(item, i) in sites" :key="i">
@@ -74,6 +74,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+$small: 900px;
+
 #sectioncontainer {
 
     #jumbo {
@@ -81,12 +83,18 @@ export default {
         margin-top: 160px;
         justify-content: space-between;
 
-        div {
+        @media screen and (max-width: $small ) {
+            #imgJumbo {
+                display: none;
+            }
+        }
+
+
+        #textJumbo {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
-            width: 50%;
 
             #titoletto {
                 border: 1px solid #ADB5BD;
@@ -111,6 +119,10 @@ export default {
                 display: inline-block;
                 width: 100%;
 
+                button {
+                    margin: 10px 0;
+                }
+
                 @import '../assets/button.scss';
 
                 #btDocumentation:hover {
@@ -134,6 +146,7 @@ export default {
         img {
             width: 80px;
         }
+
     }
 }
 </style>

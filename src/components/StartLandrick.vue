@@ -32,12 +32,19 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import '../assets/button.scss';
+$small: 1000px;
 
 section {
     width: 60%;
     margin: 50px auto;
     text-align: center;
 
+    @media screen and (max-width: $small ) {
+        & {
+            width: 100%;
+
+        }
+    }
 
     #text {
         h2 {

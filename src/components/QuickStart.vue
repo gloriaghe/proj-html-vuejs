@@ -6,8 +6,9 @@
             generate awareness,
             drive traffic, connect.</span>
         <div id="containerProgram">
-            <div id="program" >
-                <a @click="clickHere(element)" v-for="(element, i) in siti" :key="i" :class="element.here? 'here':''">{{element.name}}</a>
+            <div id="program">
+                <a @click="clickHere(element)" v-for="(element, i) in siti" :key="i"
+                    :class="element.here ? 'here' : ''">{{ element.name }}</a>
             </div>
             <span>
                 <span class="green">$ </span>
@@ -40,30 +41,30 @@ export default {
     name: 'QuickStart',
     data() {
         return {
-        siti:[
-            {
-                name: "npm",
-                here: true
-            },
-            {
-                name: "nuget",
-                here: false
-            },
-            {
-                name: "spm",
-                here: false
-            },
-            {
-                name: "github",
-                here: false
-            }
-        ]
+            siti: [
+                {
+                    name: "npm",
+                    here: true
+                },
+                {
+                    name: "nuget",
+                    here: false
+                },
+                {
+                    name: "spm",
+                    here: false
+                },
+                {
+                    name: "github",
+                    here: false
+                }
+            ]
         }
     },
     methods: {
-        clickHere(elementActive){
+        clickHere(elementActive) {
             this.siti.forEach(element => {
-                element.here= false
+                element.here = false
             });
             elementActive.here = true
         }
@@ -74,6 +75,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import '../assets/check.scss';
+$small: 900px;
 
 @mixin colorBlue {
     color: #2f55d4
@@ -93,6 +95,12 @@ section {
     width: 65%;
     margin: 0 auto;
     padding-bottom: 80px;
+
+    @media screen and (max-width: $small ) {
+        & {
+            width: 100%;
+        }
+    }
 
     strong {
         @include colorBlue;
@@ -164,12 +172,12 @@ section {
         display: flex;
         width: 100%;
 
-        div{
+        div {
             margin-right: 30px;
         }
     }
 
-    
+
 
 
 }
