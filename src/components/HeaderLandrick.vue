@@ -24,9 +24,7 @@
 
 
             <div id="ingranaggio" @click="colorChange = !colorChange">
-                <span id="gear">
-                    <font-awesome-icon icon="fa-solid fa-gear" />
-                </span>
+                <font-awesome-icon icon="fa-solid fa-gear" id="gear" />
                 <div id="opzioniColore" v-if="colorChange">
                     <h3 id="titleOpzion">Theme option</h3>
                     <div id="buttonspace">
@@ -261,12 +259,13 @@ header {
             left: 10px;
 
 
-            & #gear {
+            #gear {
                 font-size: 20px;
                 color: #2f55d4;
-                animation: mymove 3s infinite;
+                animation: mymove 4s infinite;
 
                 @keyframes mymove {
+                    
                     0% {
                         transform: rotate(360deg);
                     }
