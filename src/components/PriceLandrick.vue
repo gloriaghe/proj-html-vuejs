@@ -10,9 +10,9 @@
                 <span>
                     <strong>{{element.name}}</strong>
                 </span>
-                <h3>
+                <h2>
                     <font-awesome-icon icon="fa-solid fa-dollar-sign" />{{element.price}}
-                </h3>
+                </h2>
                 <span>Per Month</span>
                 <span>{{element.text}}</span>
                 <div id="containerCheck">
@@ -138,8 +138,8 @@ $xsmall: 750px;
                 padding: 10px 20px;
             }
 
-            h3 {
-                color: black;
+            h2 {
+                
                 margin: 20px 0 10px 0;
                 font-size: 35px;
             }

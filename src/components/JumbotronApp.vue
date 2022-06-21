@@ -80,7 +80,7 @@ $small: 900px;
 
     #jumbo {
         display: flex;
-        margin-top: 160px;
+        padding-top: 160px;
         justify-content: space-between;
 
         @media screen and (max-width: $small ) {
@@ -107,7 +107,6 @@ $small: 900px;
             }
 
             h1 {
-                color: black;
                 font-size: 40px;
                 margin: 20px 0;
                 width: 80%;

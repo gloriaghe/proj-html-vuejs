@@ -22,16 +22,14 @@
 
 
         <div id="ingranaggio" @click="colorChange = !colorChange">
-            <img src="../assets/img/ingranaggio.png" alt="impostazioni sito">
+            <span id="gear"><font-awesome-icon icon="fa-solid fa-gear" /></span>
             <div id="opzioniColore" v-if="colorChange">
-                <h2 id="titleOpztion">Theme option</h2>
+                <h3 id="titleOpzion">Theme option</h3>
                 <div id="buttonspace">
-                    <button class="btBlue">
-                        <a href="#">Light</a>
+                    <button :class="colorChange ? 'btBlue' : ''" @click="$emit('changeColor', colorChange)">
+                        <a href="#">Cambia Tema</a>
                     </button>
-                    <button>
-                        <a href="#">Dark</a>
-                    </button>
+
                 </div>
             </div>
         </div>
@@ -171,7 +169,7 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
-    background-color: white;
+    
 
     @media screen and (max-width: $small ) {
         & {
@@ -190,6 +188,7 @@ header {
 
     #logo {
         max-width: 140px;
+        padding-left: 10px;
     }
 
     nav {
@@ -252,8 +251,10 @@ header {
         top: 180px;
         left: 10px;
 
-        & img {
-            width: 30px;
+
+        & #gear {
+            font-size: 20px;
+            color: #2f55d4;
             animation: mymove 3s infinite;
 
             @keyframes mymove {
@@ -267,33 +268,21 @@ header {
             & {
                 left: 0px;
                 top: 120px;
-
             }
         }
 
         #opzioniColore {
-            position: absolute;
             left: 0px;
             top: 25px;
-            background-color: white;
-            width: 150px;
-
-            #titleOpztion {
-                font-size: 22px;
-            }
-
-            #buttonspace {
-                display: flex;
-                flex-direction: column;
-                height: 130px;
-                width: 50%;
-                margin-left: 25%;
-                justify-content: space-around;
-
-                button {
-                    padding: 7px 10px;
-                }
-            }
+            background-color: #ADB5BD;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 10px 10px;
+            font-size: 18px;
+            color: black;
+            box-shadow: 4px 4px 6px #8a99a7;
         }
 
     }
