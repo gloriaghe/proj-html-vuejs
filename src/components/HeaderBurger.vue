@@ -157,7 +157,7 @@ section {
         z-index: 100;
         top: 20px;
         right: 20px;
-        color: white;
+        color: black;
         font-size: 25px;
     }
 
