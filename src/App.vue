@@ -1,6 +1,6 @@
 <template>
   <div id="app" :class='cambio ? "dark" : ""'>
-    <div id="container" :class='cambio ? "light" : ""'>
+    <div id="container">
       <HeaderLandrick @changeColor="changeColor" />
       <JumbotronApp />
       <main>
@@ -48,6 +48,8 @@ export default {
     }
   },
   methods: {
+
+    //cambio tema (colore)
     changeColor() {
 
       if (this.cambio === false) {
@@ -80,27 +82,13 @@ $small: 1000px;
   line-height: 30px;
   letter-spacing: 0.5px;
 
-  &.dark {
-    background-color: rgb(33, 30, 30);
-    color: #b2c1d7;
-  }
-
 
   #container {
     width: 65%;
     margin: 0 auto;
 
-    header{
+    header {
       background-color: white;
-    }
-
-    &.light h2,
-    &.light h1 {
-      color: white;
-    }
-
-    &.light header{
-      background-color: #94abe9;
     }
 
     @media screen and (max-width: $medium ) {
@@ -132,6 +120,36 @@ $small: 1000px;
       margin-bottom: 70px;
     }
   }
+
+  // cambio tema (colore)
+  &.dark {
+    background-color: rgb(33, 30, 30);
+    color: #b2c1d7;
+
+    #container h2,
+    #container h1 {
+      color: white;
+    }
+
+    #container header {
+      background-color: #94abe9;
+
+      .colorADark {
+        color: #2f55d4;
+      }
+
+      #internalLink {
+        background-color: #94abe9;
+
+        a {
+          color: white;
+          padding-left: 10px;
+        }
+      }
+    }
+
+  }
+
 }
 
 * {

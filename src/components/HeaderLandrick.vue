@@ -17,7 +17,7 @@
             </nav>
 
             <div>
-                <a href="#" :class="i > 0 ? 'buttonFont' : ''" v-for="(font, i) in navFont" :key="i">
+                <a class="colorADark" href="#" :class="i > 0 ? 'buttonFont' : ''" v-for="(font, i) in navFont" :key="i">
                     <font-awesome-icon :icon="font" />
                 </a>
             </div>
@@ -233,7 +233,7 @@ header {
 
             a {
                 margin-right: 10px;
-                color: #adb5bd
+                color: #adb5bd;
             }
 
             .buttonFont {
@@ -243,6 +243,7 @@ header {
                 border-radius: 5px;
                 @include colorBlue;
                 box-shadow: 2px 2px 3px #ADB5BD;
+                
 
                 &:hover {
                     background-color: #2f55d4;
