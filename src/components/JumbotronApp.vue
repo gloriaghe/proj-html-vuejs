@@ -76,6 +76,8 @@ export default {
 <style scoped lang="scss">
 $small: 900px;
 
+$xsmall: 700px;
+
 #sectioncontainer {
 
     #jumbo {
@@ -84,6 +86,13 @@ $small: 900px;
         justify-content: space-between;
 
         @media screen and (max-width: $small ) {
+            #imgJumbo {
+                width: 300px;
+                object-fit: contain;
+            }
+        }
+
+        @media screen and (max-width: $xsmall ) {
             #imgJumbo {
                 display: none;
             }
