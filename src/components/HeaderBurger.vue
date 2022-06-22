@@ -1,10 +1,7 @@
 <template>
-    <header>
-        <div id="containerHeader">
-
-            <a href="#">
-                <img id="logo" :src="imgLogo" :alt="imgAlt">
-            </a>
+    <section>
+        <font-awesome-icon id="burger" icon="fa-solid fa-bars" @click="burgerActive" />
+        <div id="burgerMenu" v-if="burgerOn">
             <nav>
                 <a href="#" v-for="(item, i) in navBar" @dblclick="noClick(item)" @click="clickHere(item)" :key="i"
                     :class="item.here ? 'here' : ''">
@@ -16,44 +13,22 @@
                 </a>
             </nav>
 
-            <div>
+            <div id="iconFontBurger">
                 <a class="colorADark" href="#" :class="i > 0 ? 'buttonFont' : ''" v-for="(font, i) in navFont" :key="i">
                     <font-awesome-icon :icon="font" />
                 </a>
             </div>
-
-            <HeaderBurger />
-            <div id="ingranaggio" @click="colorChange = !colorChange">
-                <font-awesome-icon icon="fa-solid fa-gear" id="gear" />
-                <div id="opzioniColore" v-if="colorChange">
-                    <h3 id="titleOpzion">Theme option</h3>
-                    <div id="buttonspace">
-                        <button :class="colorChange ? 'btBlue' : ''" @click="$emit('changeColor', colorChange)">
-                            <a href="#">Cambia Tema</a>
-                        </button>
-
-                    </div>
-                </div>
-            </div>
         </div>
-
-
-    </header>
+    </section>
 </template>
 
 <script>
-import HeaderBurger from '../components/HeaderBurger.vue'
-
 export default {
-    name: 'HeaderLandrick',
-    components: {
-        HeaderBurger
-    },
+    name: 'HeaderBurger',
     data() {
         return {
-            imgLogo: require('../assets/img/logo-dark.png'),
-            imgAlt: "Logo Landrick",
-            colorChange: false,
+
+            burgerOn: false,
             navBar: [
                 {
                     text: "HOME",
@@ -132,6 +107,14 @@ export default {
         }
     },
     methods: {
+        burgerActive() {
+            if (this.burgerOn === false) {
+                this.burgerOn = true
+            } else{
+                this.burgerOn = false
+            }
+        },
+        
         clickHere(attivo) {
             if (attivo.navClick === false) {
 
@@ -149,68 +132,43 @@ export default {
         noClick(item) {
             item.navClick = false
         }
-
     }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+$xsmall: 700px;
 @mixin colorBlue {
     color: #2f55d4
 }
 
-;
-@import '../assets/button.scss';
-$small: 1000px;
-$xsmall: 700px;
+section {
+    display: none;
 
-header {
-    width: 100%;
-    background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-
-    #containerHeader {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        min-height: 70px;
-        width: 65%;
-        margin-left: calc(35% / 2);
-
-
-
-        @media screen and (max-width: $small ) {
+     @media screen and (max-width: $xsmall ) {
             & {
-                width: 100%;
-                margin-left: 0;
-                justify-content: space-around
+                display: inline-block;
             }
         }
 
-        @media screen and (max-width: $xsmall ) {
-            & {
-                flex-wrap: wrap;
-                justify-content: space-between;
-                padding: 0 20px;
-
-                nav,
-                .colorADark {
-                    display: none;
-
-                }
-            }
-        }
-
-        #logo {
-            max-width: 140px;
-            padding-left: 10px;
-        }
+    #burger{
+        position: fixed;
+        z-index: 100;
+        top: 20px;
+        right: 20px;
+    }
+    #burgerMenu {
+        padding: 10px 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
 
         nav {
+            display: flex;
+            flex-direction: column;
+            margin-right: 30px;
+
 
             a {
                 color: #3c4858;
@@ -226,10 +184,7 @@ header {
                 }
 
                 #internalLink {
-                    position: absolute;
-                    top: 20px;
-                    left: 0px;
-                    background-color: white;
+                    margin-top: 0px;
 
                     a {
                         display: block;
@@ -241,11 +196,12 @@ header {
 
         div {
             font-size: 15px;
-
+            margin-top: 20px;
 
             a {
                 margin-right: 10px;
                 color: #adb5bd;
+                
             }
 
             .buttonFont {
@@ -263,52 +219,8 @@ header {
                 }
             }
         }
-
-
-
-        #ingranaggio {
-            position: fixed;
-            top: 180px;
-            left: 10px;
-
-
-            #gear {
-                font-size: 20px;
-                color: #2f55d4;
-                animation: mymove 4s infinite;
-
-                @keyframes mymove {
-
-                    0% {
-                        transform: rotate(360deg);
-                    }
-                }
-            }
-
-            @media screen and (max-width: $xsmall ) {
-                & {
-                    left: 0px;
-                    top: 120px;
-                }
-            }
-
-            #opzioniColore {
-                left: 0px;
-                top: 25px;
-                background-color: #ADB5BD;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                text-align: center;
-                padding: 10px 10px;
-                font-size: 18px;
-                color: black;
-                box-shadow: 4px 4px 6px #8a99a7;
-            }
-
-        }
-
-
     }
 }
+
+;
 </style>

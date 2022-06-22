@@ -74,6 +74,7 @@ export default {
 //media query
 $medium: 1400px;
 $small: 1000px;
+$xsmall: 700px;
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -146,6 +147,14 @@ $small: 1000px;
           padding-left: 10px;
         }
       }
+
+      @media screen and (max-width: $xsmall ) {
+        nav, #burgerMenu {
+          background-color: #94abe9;
+
+        }
+      }
+
     }
 
   }

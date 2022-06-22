@@ -153,6 +153,12 @@ section {
 
                 border-radius: 10px;
                 padding: 10px 40px;
+
+                @media screen and (max-width: $small ) {
+                & {
+                    padding: 10px 0px;
+                }
+            }
             }
         }
 

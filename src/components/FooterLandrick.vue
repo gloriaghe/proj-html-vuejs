@@ -284,6 +284,7 @@ footer {
             & {
                 width: 90%;
                 flex-wrap: wrap;
+                height: 100px;
             }
         }
 
