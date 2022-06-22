@@ -162,6 +162,7 @@ export default {
 
 ;
 @import '../assets/button.scss';
+$medium: 1400px;
 $small: 1000px;
 $xsmall: 700px;
 
@@ -181,7 +182,12 @@ header {
         width: 65%;
         margin-left: calc(35% / 2);
 
-
+        @media screen and (max-width: $medium ) {
+            & {
+                width: 80%;
+                margin-left: 10%;
+            }
+        }
 
         @media screen and (max-width: $small ) {
             & {
