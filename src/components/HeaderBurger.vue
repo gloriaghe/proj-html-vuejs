@@ -157,7 +157,10 @@ section {
         z-index: 100;
         top: 20px;
         right: 20px;
+        color: white;
+        font-size: 25px;
     }
+
     #burgerMenu {
         padding: 10px 10px;
         position: absolute;
